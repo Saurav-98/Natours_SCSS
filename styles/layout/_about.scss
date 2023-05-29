@@ -1,0 +1,16 @@
+.about {
+  background: $light-gray-2;
+  margin-top: -20vh;
+
+  &__content-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: $gap-vertical;
+    column-gap: $gap-horizontal;
+  }
+
+  &__text-content {
+  }
+  &__img-composition {
+  }
+}
