@@ -1,0 +1,85 @@
+.tours {
+  background-color: $light-gray-2;
+  margin-top: -25vh;
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $gap-vertical;
+  }
+}
+
+.tour {
+  //   backface-visibility: hidden;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 50rem;
+  position: relative;
+
+  &__side {
+    height: 50rem;
+    color: #fff;
+    font-size: 2rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
+    &--front {
+      //   background-color: orangered;
+    }
+    &--back {
+      //   background-color: greenyellow;
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $light-green,
+          $dark-green
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
+    }
+  }
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(360deg);
+  }
+
+  &__heading {
+  }
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    &--1 {
+      background-image: url("../../assets/nat-5.jpg");
+    }
+    &--2 {
+      background: url("../../assets/nat-6.jpg");
+    }
+    &--3 {
+      background: url("../../assets/nat-7.jpg");
+    }
+  }
+  &__details {
+  }
+}
