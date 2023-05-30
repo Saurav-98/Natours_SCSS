@@ -68,4 +68,27 @@
     visibility: hidden;
     transform: translateY(-4rem);
   }
+
+  &__radio-group {
+    width: 48%;
+    display: inline-block;
+  }
+  &__radio-label {
+    font-size: 1.6rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.5rem;
+  }
+  &__radio-button {
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid $medium-green;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: -0.5rem;
+    &::after {
+    }
+  }
 }
