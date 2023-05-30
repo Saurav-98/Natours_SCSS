@@ -27,6 +27,10 @@
     background-color: $white;
     color: $light-gray;
   }
+  &--green {
+    background-color: $medium-green;
+    color: $white;
+  }
   &--animated {
     animation: moveInBtn 0.6s ease 0.75s;
     animation-fill-mode: backwards;
