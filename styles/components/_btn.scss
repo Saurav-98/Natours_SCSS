@@ -1,5 +1,6 @@
 .btn {
-  &:is(:link, :visited) {
+  &:is(:link, :visited),
+  & {
     display: inline-block;
     text-transform: uppercase;
     padding: 1.5rem 4rem;
@@ -7,9 +8,14 @@
     border: none;
     position: relative;
     border-radius: 10rem;
+    cursor: pointer;
   }
 
-  &:is(:hover) {
+  &:is(:focus-visible) {
+    outline: 2px solid $medium-green;
+    outline-offset: 1rem;
+  }
+  &:is(:hover, :active) {
     transform: translateY(-4px);
     box-shadow: 0 1rem 2rem rgba($black, 0.2);
 
@@ -26,10 +32,20 @@
   &--white {
     background-color: $white;
     color: $light-gray;
+
+    &:is(:focus-visible) {
+      outline: 2px solid $white;
+      outline-offset: 1rem;
+    }
   }
   &--green {
     background-color: $medium-green;
     color: $white;
+
+    &:is(:focus-visible) {
+      outline: 2px solid $medium-green;
+      outline-offset: 1rem;
+    }
   }
   &--animated {
     animation: moveInBtn 0.6s ease 0.75s;
@@ -59,8 +75,12 @@
     transition: all 0.4s ease;
     font-size: $default-fz;
   }
+  &:is(:focus-visible) {
+    outline: 2px solid $medium-green;
+    outline-offset: 1rem;
+  }
 
-  &:is(:hover, :focus-visible) {
+  &:is(:hover) {
     background-color: $medium-green;
     color: $white;
     transform: translateY(-0.5rem);
