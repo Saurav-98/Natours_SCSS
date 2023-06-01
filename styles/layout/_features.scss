@@ -18,6 +18,22 @@
   gap: $gap-vertical;
   max-width: $container-width;
   margin: 0 auto;
+  // max-width: 60rem;
+
+  @include respond(tab-land) {
+    gap: 4rem;
+    padding: 0 2rem;
+  }
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 8rem;
+    column-gap: 4rem;
+    padding: 8rem;
+  }
+  @include respond(phone) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4rem;
+  }
 }
 
 .feature {
@@ -28,6 +44,13 @@
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($black, 0.2);
   transition: all 0.4s ease;
+
+  @include respond(tab-land) {
+    padding: 2.5rem 1.5rem;
+  }
+  @include respond(tab-port) {
+    padding: 4rem 2rem;
+  }
 
   &__icon {
     width: 6rem;
